@@ -1,4 +1,4 @@
-package pieces;
+package harivara.chess.components.pieces;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,13 +6,13 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-import board.Board;
-import board.BoardUtils;
-import board.Tile;
-import board.Move.AttackMove;
-import board.Move.MajorMove;
-import board.Move;
-import misc.Alliance;
+import harivara.chess.components.board.Board;
+import harivara.chess.components.board.BoardUtils;
+import harivara.chess.components.board.Move;
+import harivara.chess.components.board.Tile;
+import harivara.chess.components.board.Move.AttackMove;
+import harivara.chess.components.board.Move.MajorMove;
+import harivara.chess.components.misc.Alliance;
 
 
 

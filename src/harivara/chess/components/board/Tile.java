@@ -1,11 +1,11 @@
-package board;
+package harivara.chess.components.board;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import com.google.common.collect.ImmutableMap;
 
-import pieces.Piece;
+import harivara.chess.components.pieces.Piece;
 
 
 

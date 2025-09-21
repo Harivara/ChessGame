@@ -1,4 +1,4 @@
-package player;
+package harivara.chess.components.player;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,11 +8,11 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
 
-import board.Board;
-import board.Move;
-import misc.Alliance;
-import pieces.King;
-import pieces.Piece;
+import harivara.chess.components.board.Board;
+import harivara.chess.components.board.Move;
+import harivara.chess.components.misc.Alliance;
+import harivara.chess.components.pieces.King;
+import harivara.chess.components.pieces.Piece;
 
 public abstract class Player {
 

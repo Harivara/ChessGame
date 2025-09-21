@@ -1,4 +1,4 @@
-package pieces;
+package harivara.chess.components.pieces;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,18 +6,18 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-import board.Board;
-import board.BoardUtils;
-import board.Move;
-import board.Tile;
-import misc.Alliance;
+import harivara.chess.components.board.Board;
+import harivara.chess.components.board.BoardUtils;
+import harivara.chess.components.board.Move;
+import harivara.chess.components.board.Tile;
+import harivara.chess.components.misc.Alliance;
 
-public class Queen extends Piece {
+public class Rook extends Piece {
 
-    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = { -9, -8, -7, -1, 1, 7, 8, 9 };
+    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = { -8, -1, 1, 8 };
 
-    public Queen(int piecePosition, Alliance pieceAlliance) {
-        super(PieceType.QUEEN,piecePosition, pieceAlliance);
+    public Rook(int piecePosition, Alliance pieceAlliance) {
+        super(PieceType.ROOK,piecePosition, pieceAlliance);
     }
 
     @Override
@@ -53,20 +53,21 @@ public class Queen extends Piece {
 
     @Override
     public String toString(){
-        return PieceType.QUEEN.toString();
+        return PieceType.ROOK.toString();
     }
 
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset) {
-        return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -1 || candidateOffset == -9 || candidateOffset == 7);
+        return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -1);
     }
 
     private static boolean isEightColumnExclusion(final int currentPosition, final int candidateOffset) {
-        return BoardUtils.EIGHTH_COLUMN[currentPosition] && (candidateOffset == 1 || candidateOffset == -7 || candidateOffset == 9);
+        return BoardUtils.EIGHTH_COLUMN[currentPosition] && (candidateOffset == 1);
     }
 
     @Override
-    public Queen movePiece(final Move move) {
-        return  new Queen(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance());
+    public Rook movePiece(final Move move) {
+        return  new Rook(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance());
     }
+
 }
 

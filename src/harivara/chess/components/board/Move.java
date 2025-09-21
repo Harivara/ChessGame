@@ -1,9 +1,9 @@
-package board;
+package harivara.chess.components.board;
 
-import board.Board.Builder;
-import pieces.Pawn;
-import pieces.Piece;
-import pieces.Rook;
+import harivara.chess.components.board.Board.Builder;
+import harivara.chess.components.pieces.Pawn;
+import harivara.chess.components.pieces.Piece;
+import harivara.chess.components.pieces.Rook;
 
 public abstract class Move {
     final Board board;

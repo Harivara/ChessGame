@@ -1,8 +1,8 @@
-package misc;
+package harivara.chess.components.misc;
 
-import player.BlackPlayer;
-import player.Player;
-import player.WhitePlayer;
+import harivara.chess.components.player.BlackPlayer;
+import harivara.chess.components.player.Player;
+import harivara.chess.components.player.WhitePlayer;
 
 public enum Alliance {
     WHITE {

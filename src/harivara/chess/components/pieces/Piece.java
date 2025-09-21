@@ -1,10 +1,9 @@
-package pieces;
-import board.Move;
-
+package harivara.chess.components.pieces;
 import java.util.Collection;
 
-import board.Board;
-import misc.Alliance;
+import harivara.chess.components.board.Board;
+import harivara.chess.components.board.Move;
+import harivara.chess.components.misc.Alliance;
 
 public abstract class Piece {
 

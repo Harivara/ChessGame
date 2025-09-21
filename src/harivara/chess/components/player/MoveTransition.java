@@ -1,7 +1,7 @@
-package player;
+package harivara.chess.components.player;
 
-import board.Board;
-import board.Move;
+import harivara.chess.components.board.Board;
+import harivara.chess.components.board.Move;
 
 public class MoveTransition {
 

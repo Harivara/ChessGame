@@ -1,4 +1,4 @@
-import board.Board;
+import harivara.chess.components.board.Board;
 
 public class App {
     public static void main(String[] args) throws Exception {

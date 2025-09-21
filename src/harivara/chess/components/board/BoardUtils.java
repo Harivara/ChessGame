@@ -1,4 +1,4 @@
-package board;
+package harivara.chess.components.board;
 
 public class BoardUtils {
 

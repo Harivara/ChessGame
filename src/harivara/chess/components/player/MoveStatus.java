@@ -1,4 +1,4 @@
-package player;
+package harivara.chess.components.player;
 
 public enum MoveStatus {
     DONE

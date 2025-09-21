@@ -1,4 +1,4 @@
-package board;
+package harivara.chess.components.board;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,17 +9,17 @@ import java.util.Map;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
 
-import misc.Alliance;
-import pieces.Bishop;
-import pieces.King;
-import pieces.Knight;
-import pieces.Pawn;
-import pieces.Piece;
-import pieces.Queen;
-import pieces.Rook;
-import player.BlackPlayer;
-import player.Player;
-import player.WhitePlayer;
+import harivara.chess.components.misc.Alliance;
+import harivara.chess.components.pieces.Bishop;
+import harivara.chess.components.pieces.King;
+import harivara.chess.components.pieces.Knight;
+import harivara.chess.components.pieces.Pawn;
+import harivara.chess.components.pieces.Piece;
+import harivara.chess.components.pieces.Queen;
+import harivara.chess.components.pieces.Rook;
+import harivara.chess.components.player.BlackPlayer;
+import harivara.chess.components.player.Player;
+import harivara.chess.components.player.WhitePlayer;
 
 public class Board {
 
@@ -71,11 +71,11 @@ public class Board {
     }
 
     public Collection<Piece>getBlackPieces(){
-        return this.getBlackPieces();
+        return this.blackPieces;
     }
 
     public Collection<Piece>getwhitePieces(){
-        return this.getwhitePieces();
+        return this.whitePieces;
     }
 
     public Player whitePlayer(){

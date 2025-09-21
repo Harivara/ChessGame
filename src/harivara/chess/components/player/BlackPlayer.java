@@ -1,4 +1,4 @@
-package player;
+package harivara.chess.components.player;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,14 +6,14 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-import board.Board;
-import board.Move;
-import board.Move.KingSideCastleMove;
-import board.Move.QueenSideCastleMove;
-import board.Tile;
-import misc.Alliance;
-import pieces.Piece;
-import pieces.Rook;
+import harivara.chess.components.board.Board;
+import harivara.chess.components.board.Move;
+import harivara.chess.components.board.Tile;
+import harivara.chess.components.board.Move.KingSideCastleMove;
+import harivara.chess.components.board.Move.QueenSideCastleMove;
+import harivara.chess.components.misc.Alliance;
+import harivara.chess.components.pieces.Piece;
+import harivara.chess.components.pieces.Rook;
 
 public class BlackPlayer extends Player {
 
