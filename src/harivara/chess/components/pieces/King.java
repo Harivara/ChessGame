@@ -18,8 +18,8 @@ public class King extends Piece {
 
     private final static int[] CANDIDATE_MOVE_COORDINATE = {-9, -8, -7, -1, 1, 7, 8, 9};
 
-    public King(final int piecePosition,final Alliance pieceAlliance) {
-        super(PieceType.KING,piecePosition, pieceAlliance);
+    public King(final int piecePosition,final Alliance pieceAlliance,final boolean isFirstMove) {
+        super(PieceType.KING,piecePosition, pieceAlliance,isFirstMove);
     }
 
     @Override
@@ -51,6 +51,8 @@ public class King extends Piece {
         return ImmutableList.copyOf(legalMoves);
     }
 
+    
+
     @Override
     public String toString(){
         return PieceType.KING.toString();
@@ -66,7 +68,7 @@ public class King extends Piece {
 
     @Override
     public King movePiece(final Move move) {
-        return  new King(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance());
+        return  new King(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance(),false);
     }    
 
 }

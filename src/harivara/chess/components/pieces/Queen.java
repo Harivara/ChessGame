@@ -16,8 +16,8 @@ public class Queen extends Piece {
 
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = { -9, -8, -7, -1, 1, 7, 8, 9 };
 
-    public Queen(int piecePosition, Alliance pieceAlliance) {
-        super(PieceType.QUEEN,piecePosition, pieceAlliance);
+    public Queen(int piecePosition, Alliance pieceAlliance,final boolean isFirstMove) {
+        super(PieceType.QUEEN,piecePosition, pieceAlliance,isFirstMove);
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Queen extends Piece {
 
     @Override
     public Queen movePiece(final Move move) {
-        return  new Queen(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance());
+        return  new Queen(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance(),false);
     }
 }
 

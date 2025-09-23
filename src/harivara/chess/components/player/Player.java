@@ -52,6 +52,7 @@ public abstract class Player {
                 return (King) piece;
             }
         }
+        
         throw new RuntimeException("Should not reach here! Not a valid board!");
     }
 

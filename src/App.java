@@ -1,3 +1,5 @@
+import harivara.chess.gui.Table;
+
 import harivara.chess.components.board.Board;
 
 public class App {
@@ -5,5 +7,7 @@ public class App {
         Board board=Board.createStandardBoard();
 
         System.out.println(board);
+
+        Table table=new Table();
     }
 }
