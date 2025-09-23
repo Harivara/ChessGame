@@ -20,8 +20,8 @@ public class Knight extends Piece {
 
     private final static int[] CANDIDATE_MOVE_COORDINATES = { -17, -15, -10, -6, 6, 10, 15, 17 };
 
-    public Knight(final int piecePosition, final Alliance pieceAlliance) {
-        super(PieceType.KNIGHT,piecePosition, pieceAlliance);
+    public Knight(final int piecePosition, final Alliance pieceAlliance,final boolean isFirstMove) {
+        super(PieceType.KNIGHT,piecePosition, pieceAlliance,isFirstMove);
     }
 
     @Override
@@ -74,8 +74,7 @@ public class Knight extends Piece {
         candidateOffset== 6  ));
     }
     private static boolean isSeventhColumnExclusion(final int currentPosition, int candidateOffset) {
-        return BoardUtils.SEVENTH_COLUMN[currentPosition] && ((candidateOffset== -6 || candidateOffset== 10 ||
-        candidateOffset== 6 || candidateOffset== 15 ));
+        return BoardUtils.SEVENTH_COLUMN[currentPosition] && ((candidateOffset== -6 || candidateOffset== 10));
     }
     private static boolean isEighthColumnExclusion(final int currentPosition, int candidateOffset) {
         return BoardUtils.EIGHTH_COLUMN[currentPosition] && ((candidateOffset== -15 || 
@@ -84,7 +83,7 @@ public class Knight extends Piece {
 
     @Override
     public Knight movePiece(final Move move) {
-        return  new Knight(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance());
+        return  new Knight(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance(),false);
     }    
     
 }

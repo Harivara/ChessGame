@@ -19,8 +19,8 @@ public class Bishop extends Piece {
 
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = { -9, -7, 7, 9 };
 
-    public Bishop(int piecePosition, Alliance pieceAlliance) {
-        super(PieceType.BISHOP,piecePosition, pieceAlliance);
+    public Bishop(int piecePosition, Alliance pieceAlliance, final boolean isFirstMove) {
+        super(PieceType.BISHOP,piecePosition, pieceAlliance,isFirstMove);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class Bishop extends Piece {
 
     @Override
     public Bishop movePiece(final Move move) {
-        return  new Bishop(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance());
+        return  new Bishop(move.getDestinationCoordinate(),move.getMovedPiece().getPieceAlliance(),false);
     }
 
 }
