@@ -32,12 +32,15 @@ public class Board {
     private final BlackPlayer blackPlayer;
 
     private final Player currentPlayer;
+
+    private final Pawn enPassant;
     
 
     private Board(final Builder builder) {
         this.gameBoard = createGameBoard(builder);
         this.whitePieces=calculateActivePieces(this.gameBoard,Alliance.WHITE);
         this.blackPieces=calculateActivePieces(this.gameBoard,Alliance.BLACK);
+        this.enPassant=builder.enPassantPawn;
 
         final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(this.whitePieces);
         final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(this.blackPieces);
@@ -49,6 +52,10 @@ public class Board {
         this.currentPlayer=builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer);
         
         
+    }
+
+    public Pawn getEnPassantPawn(){
+        return this.enPassant;
     }
 
     public Iterable<Move> getAllLegalMoves(){

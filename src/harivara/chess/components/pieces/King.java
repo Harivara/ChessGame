@@ -11,6 +11,7 @@ import harivara.chess.components.board.BoardUtils;
 import harivara.chess.components.board.Move;
 import harivara.chess.components.board.Tile;
 import harivara.chess.components.board.Move.AttackMove;
+import harivara.chess.components.board.Move.MajorAttackMove;
 import harivara.chess.components.board.Move.MajorMove;
 import harivara.chess.components.misc.Alliance;
 
@@ -42,7 +43,7 @@ public class King extends Piece {
                     final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                     final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                     if(this.pieceAlliance != pieceAlliance) {
-                        legalMoves.add(new AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                        legalMoves.add(new MajorAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
                     }
                 }
             }
